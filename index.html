@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💼 세련된 수익 계산기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>💼 세련된 수익 계산기</h1>
+        <div class="menu">
+            <button onclick="saveUserDataToLocalStorage('profitTable')">💾 데이터 저장</button>
+            <button onclick="loadUserDataFromLocalStorage('profitTable')">📂 데이터 불러오기</button>
+            <button id="addRow">➕ 행 추가</button>
+        </div>
+        <div class="options">
+            <label><input type="checkbox" id="profitLock"> 🔒 수익 고정</label>
+            <label><input type="checkbox" id="lossLock"> 🔒 로스 고정</label>
+        </div>
+    </header>
+    <main>
+        <div class="table-container">
+            <table id="profitTable">
+                <thead>
+                    <tr>
+                        <th>시작금</th>
+                        <th>1차 수익%</th>
+                        <th>1차 수익금</th>
+                        <th>1차 마감금</th>
+                        <th>분할매도%</th>
+                        <th>2차 시작금</th>
+                        <th>2차 수익%</th>
+                        <th>2차 수익금</th>
+                        <th>2차 마감금</th>
+                        <th>수익합</th>
+                        <th>평균 수익%</th>
+                        <th>로스%</th>
+                        <th>로스 금액</th>
+                        <th>손절 여부</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" class="editable">6,700,000</td>
+                        <td contenteditable="true" class="editable">3%</td>
+                        <td>201,000</td>
+                        <td>6,901,000</td>
+                        <td contenteditable="true" class="editable">50%</td>
+                        <td>3,350,000</td>
+                        <td contenteditable="true" class="editable">15%</td>
+                        <td>502,500</td>
+                        <td>3,852,500</td>
+                        <td>703,500</td>
+                        <td>9.23%</td>
+                        <td contenteditable="true" class="editable">1%</td>
+                        <td>67,000</td>
+                        <td><input type="checkbox" class="stopLoss"></td>
+                        <td><button class="deleteRow">X</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
